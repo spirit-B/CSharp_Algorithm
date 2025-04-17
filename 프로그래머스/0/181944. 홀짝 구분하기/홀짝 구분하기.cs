@@ -6,13 +6,6 @@ public class Example
     {
         int num = int.Parse(Console.ReadLine());
         
-        if (num % 2 == 0)
-        {
-            Console.WriteLine($"{num} is even");
-        }
-        else
-        {
-            Console.WriteLine($"{num} is odd");
-        }
+        Console.WriteLine($"{num} is {(num % 2 == 0 ? "even" : "odd")}");
     }
 }
