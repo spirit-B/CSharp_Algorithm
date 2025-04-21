@@ -8,7 +8,7 @@ public class Solution {
         // {
         //     if (char.IsDigit(c)) answer += int.Parse(c.ToString());
         // }
-        my_string.Where(char.IsDigit).Select(c => answer += int.Parse(c.ToString())).ToArray();
-        return answer;
+        // my_string.Where(char.IsDigit).Select(c => answer += int.Parse(c.ToString())).ToArray();
+        return my_string.Where(char.IsDigit).Sum(c => int.Parse(c.ToString()));
     }
 }
