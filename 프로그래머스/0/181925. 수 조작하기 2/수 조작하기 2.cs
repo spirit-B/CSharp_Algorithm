@@ -1,16 +1,22 @@
 using System;
+using System.Text;
 
 public class Solution {
     public string solution(int[] numLog) {
-        string answer = "";
-        for (int i = 1; i < numLog.Length; i++)
+        var sb = new StringBuilder();
+        int n = numLog[0];
+        for(int i = 1; i < numLog.Length; ++i)
         {
-            int minus = numLog[i] - numLog[i - 1];
-            if (minus == 1) answer += 'w';
-            else if (minus == -1) answer += 's';
-            else if (minus == 10) answer += 'd';
-            else answer += 'a';
+            int next = numLog[i];
+
+            if(n + 1 == next)       sb.Append("w");
+            else if(n - 1 == next)  sb.Append("s");
+            else if(n + 10 == next) sb.Append("d");
+            else if(n - 10 == next) sb.Append("a");
+
+            n = next;
         }
-        return answer;
+
+        return sb.ToString();
     }
 }
