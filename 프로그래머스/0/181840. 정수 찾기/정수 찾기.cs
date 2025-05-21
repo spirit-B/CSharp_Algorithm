@@ -8,6 +8,7 @@ public class Solution {
         //     if (num_list[i] == n) return 1;
         // }
         // return 0;
-        return Array.Exists(num_list, num => num == n) ? 1 : 0;
+        // return Array.Exists(num_list, num => num == n) ? 1 : 0;
+        return num_list.Contains(n) ? 1 : 0;
     }
 }
