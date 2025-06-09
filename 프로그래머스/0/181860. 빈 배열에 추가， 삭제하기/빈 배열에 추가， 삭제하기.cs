@@ -5,6 +5,7 @@ using System.Linq;
 public class Solution {
     public int[] solution(int[] arr, bool[] flag) {
         Stack<int> answer = new Stack<int>();
+        
         for (int i = 0; i < flag.Length; i++)
         {
             if (flag[i] == true)
@@ -22,6 +23,7 @@ public class Solution {
                 }
             }
         }
+        
         return answer.Reverse().ToArray();
     }
 }
