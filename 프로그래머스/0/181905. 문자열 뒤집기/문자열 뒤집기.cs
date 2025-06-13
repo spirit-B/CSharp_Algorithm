@@ -1,11 +1,10 @@
 using System;
-using System.Linq;
 
 public class Solution {
     public string solution(string my_string, int s, int e) {
-        string str = my_string.Substring(s, e - s + 1);
-        string newStr = new string(str.Reverse().ToArray());
+        char[] str = my_string.ToCharArray();
+        Array.Reverse(str, s, e - s + 1);
         
-        return my_string.Replace(str, newStr);
+        return new string(str);
     }
 }
